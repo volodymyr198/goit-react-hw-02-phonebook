@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 
-import Form from '../Form';
+import FormPhonebook from '../FormPhonebook/FormPhonebook';
 import ContactList from '../ContactList';
 import Filter from '../Filter';
 import css from './App.module.css';
@@ -65,7 +65,7 @@ class App extends Component {
         return (
             <div className={css.wrapper}>
                 <h1 className={css.titlePhone}>Phonebook</h1>
-                <Form onSubmit={this.addContactForm} />
+                <FormPhonebook onSubmit={this.addContactForm} />
                 <h2 className={css.titleCont}>Contacts</h2>
                 <Filter value={filter} onChange={this.changeFilter} />
                 <ContactList
